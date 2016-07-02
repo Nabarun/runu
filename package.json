@@ -1,0 +1,29 @@
+{
+  "name": "runu",
+  "version": "0.1.0",
+  "description": "NodePlusAngularJS",
+  "main": "hello-from-nodejs-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nabarun/runu.git"
+  },
+  "keywords": [
+    "node.js",
+    "eclipse",
+    "nodeclipse"
+  ],
+  "author": "Nabarun Sengupta",
+  "license": "MIT",
+  "dependencies": {
+    "serve-static": "~1.7.0"
+  },
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/Nabarun/runu/issues"
+  },
+  "homepage": "https://github.com/Nabarun/runu#readme"
+}
