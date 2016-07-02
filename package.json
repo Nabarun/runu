@@ -19,6 +19,9 @@
   "author": "Nabarun Sengupta",
   "license": "MIT",
   "dependencies": {
+    "bower": "^1.7.9",
+    "foobar": "^1.1.0",
+    "heroku": "^0.2.0",
     "serve-static": "~1.7.0"
   },
   "devDependencies": {},
