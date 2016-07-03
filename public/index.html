@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en">
+<!--[if IE 9]><html class="lt-ie10" lang="en"> <![endif]-->
+<html class="no-js" lang="en" >
 <head>
     <meta charset="utf-8">
 
@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
     <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/flow.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
-
+<body ng-app="website" >
 <div class="row">
     <div class="large-12 columns">
         <nav class="top-bar" data-topbar>
@@ -50,25 +53,25 @@
                         <li>
                             <img src="http://www.paulbuckler.com/wp-content/uploads/2014/07/CherryBlossoms410063-2-1000x400.jpg" alt="Analyze an Image" />
                             <div class="orbit-caption">
-                                Tell me more about this image
+                                Tell me more about this image. Give me some topics associated to this.
                             </div>
                         </li>
                         <li>
                             <img src="http://assets.rebelcircus.com/blog/wp-content/uploads/2014/07/high-waisted-shorts-all.jpg" alt="Analyze an Image 2" />
                             <div class="orbit-caption">
-                                Tell me about the dressing style
+                                Tell me about the dressing style. Am I shabbily dressed?
                             </div>
                         </li>
                         <li>
                             <img src="http://theworld100.com/wp-content/uploads/et_temp/ucl-banner-499844_1000x400.jpg" alt="Analyze an Image 2" />
                             <div class="orbit-caption">
-                                Tell me more about the location in this image
+                                Tell me more about the location in this image. Where am I?
                             </div>
                         </li>
                         <li>
                             <img src="http://beautifulimagellc.com/wp-content/uploads/2015/02/hero3.jpg" alt="Analyze an Image 2" />
                             <div class="orbit-caption">
-                                Tell me more about this selfie
+                                Tell me more about the emotions in this face. Is this person angry?
                             </div>
                         </li>
                     </uL>
@@ -86,64 +89,67 @@
     </div>
 
 </div><br>
-<div class="row">
+<div class="row" >
     <div class="large-12 columns">
-        <div class="row">
+        <div class="row" ng-controller="MainCtrl">
 
             <div class="large-3 small-6 columns">
-                <h6 class="panel secondary">Image Detection</h6>
+                <button ng-click="setRoute('imagedetection')">Image Detection</button>
             </div>
             <div class="large-3 small-6 columns">
-                <h6 class="panel primary">Style Detection</h6>
+                <button ng-click="setRoute('styledetection')">Style Detection</button>
             </div>
             <div class="large-3 small-6 columns">
-                <h6 class="panel success">Face Detection</h6>
+                <button ng-click="setRoute('facedetection')">Face Detection</button>
             </div>
             <div class="large-3 small-6 columns">
-                <h6 class="panel warning">Location Detection</h6>
+                <button ng-click="setRoute('locationdetection')">Location Detection</button>
             </div>
         </div>
     </div>
 </div>
 <div class="row">
-    <div class="large-12 columns">
-        <div class="row">
-
-            <div class="large-8 columns">
-                <div class="panel radius">
-                    <div class="row">
-                        <div class="large-6 small-6 columns">
-                            <h4>Header</h4>
-                            <hr>
-                            <h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec
-                                dignissim nibh fermentum odio ornare sagittis.</h5>
-                            <div class="show-for-small" style="text-align: center">
-                                <a class="small radius button" href="#">Call To Action!</a><br>
-                                <a class="small radius button" href="#">Call To Action!</a>
-                            </div>
-                        </div>
-                        <div class="large-6 small-6 columns">
-                            <p>Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus
-                                at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat
-                                erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="large-4 columns hide-for-small">
-                <h4>Get In Touch!</h4>
-                <hr>
-                <a href="#">
-                    <div class="panel radius callout" style="text-align: center">
-                        <strong>Call To Action!</strong>
-                    </div></a> <a href="#">
-                <div class="panel radius callout" style="text-align: center">
-                    <strong>Call To Action!</strong>
-                </div></a>
-            </div>
-        </div>
-    </div>
+    <div ng-view></div>
 </div>
+<!--<div class="row">-->
+    <!--<div class="large-12 columns">-->
+        <!--<div class="row">-->
+
+            <!--<div class="large-8 columns">-->
+                <!--<div class="panel radius">-->
+                    <!--<div class="row">-->
+                        <!--<div class="large-6 small-6 columns">-->
+                            <!--<h4>Header</h4>-->
+                            <!--<hr>-->
+                            <!--<h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec-->
+                                <!--dignissim nibh fermentum odio ornare sagittis.</h5>-->
+                            <!--<div class="show-for-small" style="text-align: center">-->
+                                <!--<a class="small radius button" href="#">Call To Action!</a><br>-->
+                                <!--<a class="small radius button" href="#">Call To Action!</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="large-6 small-6 columns">-->
+                            <!--<p>Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus-->
+                                <!--at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat-->
+                                <!--erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="large-4 columns hide-for-small">-->
+                <!--<h4>Get In Touch!</h4>-->
+                <!--<hr>-->
+                <!--<a href="#">-->
+                    <!--<div class="panel radius callout" style="text-align: center">-->
+                        <!--<strong>Call To Action!</strong>-->
+                    <!--</div></a> <a href="#">-->
+                <!--<div class="panel radius callout" style="text-align: center">-->
+                    <!--<strong>Call To Action!</strong>-->
+                <!--</div></a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 <footer class="row">
     <div class="large-12 columns">
         <hr>
@@ -170,8 +176,10 @@
         </div>
     </div>
 </footer>
+
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+
 <script>
     $(document).foundation();
 </script>
