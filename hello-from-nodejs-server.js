@@ -21,30 +21,35 @@ http.createServer(function handler(req, res) {
 
         //Get the text from the image
         if(queryData.pathname === '/gettext') {
+            console.log('I am in gettext');
             getTextFromImage(queryData.query['url'], res);
 
         }
 
         //Get the topic from the image
         if(queryData.pathname === '/getlabels') {
+            console.log('I am in getlabel');
             getTopicFromImage(queryData.query['url'], res);
 
         }
 
         //Get the face from the image
         if(queryData.pathname === '/getface') {
+            console.log('I am in getface');
             getFaceFromImage(queryData.query['url'], res);
 
         }
 
         //Get the logo from the image
         if(queryData.pathname === '/getlogo') {
+            console.log('I am in getlogo');
             getLogoFromImage(queryData.query['url'], res);
 
         }
 
         //Get the landmark from the image
         if(queryData.pathname === '/getlandmark') {
+            console.log('I am in getlandmark');
             getLandmarkFromImage(queryData.query['url'], res);
 
         }
