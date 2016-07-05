@@ -453,7 +453,7 @@
       <workItem from="1467671588177" duration="9509000" />
       <workItem from="1467688919705" duration="1932000" />
       <workItem from="1467692134438" duration="25000" />
-      <workItem from="1467692614705" duration="126000" />
+      <workItem from="1467692614705" duration="534000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing issues">
       <created>1467692675413</created>
@@ -466,7 +466,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44583000" />
+    <option name="totallyTimeSpent" value="44991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2048" height="1051" extended-state="6" />
