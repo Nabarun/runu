@@ -62,23 +62,29 @@ console.log('Server running at http://127.0.0.1:'+port+'/');
 /*
 Get the text from the image
  */
-function getTextFromImage(url, res){
-    console.log(url);
-
-    var gcloud = require('gcloud');
-    var vision = gcloud.vision({
-        projectId: 'visionapisfdc',
-        keyFilename: 'keyfile.json'
-    });
-
-    // Read the text from an image.
-    vision.detectText(url, function (err, text) {
-        var json = JSON.stringify(text);
-        console.log(json);
-        res.writeHead(200, {'Content-Type': 'text/plain'});
-        res.end(json);
+function getTextFromImage(url, res) {
+    var request = require('request');
+    request('http://www.google.com', function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            res.end(body) // Show the HTML for the Google homepage.
+        }
     });
 }
+
+//     var gcloud = require('gcloud');
+//     var vision = gcloud.vision({
+//         projectId: 'visionapisfdc',
+//         keyFilename: 'keyfile.json'
+//     });
+//
+//     // Read the text from an image.
+//     vision.detectText(url, function (err, text) {
+//         var json = JSON.stringify(text);
+//         console.log(json);
+//         res.writeHead(200, {'Content-Type': 'text/plain'});
+//         res.end(json);
+//     });
+// }
 
 /*
  Get the topics from the image
