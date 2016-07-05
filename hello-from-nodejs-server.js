@@ -15,40 +15,40 @@ http.createServer(function handler(req, res) {
     servePublic(req, res, function nextHandler(req, res){
     });
 
-    if (req.method === 'GET' ) {
-
-        var queryData = url.parse(req.url, true);
-
-        //Get the text from the image
-        if(queryData.pathname === '/gettext') {
-            getTextFromImage(queryData.query['url'], res);
-
-        }
-
-        //Get the topic from the image
-        if(queryData.pathname === '/getlabels') {
-            getTopicFromImage(queryData.query['url'], res);
-
-        }
-
-        //Get the face from the image
-        if(queryData.pathname === '/getface') {
-            getFaceFromImage(queryData.query['url'], res);
-
-        }
-
-        //Get the logo from the image
-        if(queryData.pathname === '/getlogo') {
-            getLogoFromImage(queryData.query['url'], res);
-
-        }
-
-        //Get the landmark from the image
-        if(queryData.pathname === '/getlandmark') {
-            getLandmarkFromImage(queryData.query['url'], res);
-
-        }
-    }
+    // if (req.method === 'GET' ) {
+    //
+    //     var queryData = url.parse(req.url, true);
+    //
+    //     //Get the text from the image
+    //     if(queryData.pathname === '/gettext') {
+    //         getTextFromImage(queryData.query['url'], res);
+    //
+    //     }
+    //
+    //     //Get the topic from the image
+    //     if(queryData.pathname === '/getlabels') {
+    //         getTopicFromImage(queryData.query['url'], res);
+    //
+    //     }
+    //
+    //     //Get the face from the image
+    //     if(queryData.pathname === '/getface') {
+    //         getFaceFromImage(queryData.query['url'], res);
+    //
+    //     }
+    //
+    //     //Get the logo from the image
+    //     if(queryData.pathname === '/getlogo') {
+    //         getLogoFromImage(queryData.query['url'], res);
+    //
+    //     }
+    //
+    //     //Get the landmark from the image
+    //     if(queryData.pathname === '/getlandmark') {
+    //         getLandmarkFromImage(queryData.query['url'], res);
+    //
+    //     }
+    // }
 
 }).listen(process.env.PORT || 5000);
 
