@@ -23,12 +23,14 @@
     "express": "^4.14.0",
     "foobar": "^1.1.0",
     "foundation-sites": "^6.2.3",
+    "gcloud": "^0.36.0",
     "grunt-cli": "^1.2.0",
     "heroku": "^0.2.0",
     "jade": "^1.11.0",
     "morgan": "^1.7.0",
     "serve-static": "~1.7.0",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "url": "^0.11.0"
   },
   "devDependencies": {},
   "bugs": {

@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <script src="./../js/api/detectimage.js"></script>
 </head>
 <body>
-    <div class="row">
+    <div class="row" ng-controller="ImageDetectionController">
         <div class="large-12 columns">
             <div class="row">
+                <div class="large-4 columns hide-for-small">
+                    <h4>Upload an image</h4>
+                    <hr>
+                    <a href="#">
+                        <div class="panel radius callout" style="text-align: center">
+                            <div flow-init="{target: '/upload'}"
+                                 flow-files-submitted="$flow.upload()"
+                                 flow-file-success='success($message)'>
 
+                                <input type="file" flow-btn ng-click="analyzePicture()"/>
+                                <span class="btn" flow-btn ></span>
+
+                                <table>
+                                    <tr ng-repeat="file in $flow.files">
+                                        <td><img flow-img="$flow.files[0]" /></td>
+                                        <td>{{textdetected}}</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </a>
+                </div>
                 <div class="large-8 columns">
                     <div class="panel radius">
                         <div class="row">
@@ -17,31 +41,19 @@
                                 <hr>
                                 <h5 class="subheader">On uploading an image Runu should able to identify the associated topics for that image. </h5>
                                 <h5 class="subheader">It classifies the image in 4 different categories: Adult, Medical, Spoof and Violence</h5>
-                                <div class="show-for-small" style="text-align: center">
-                                    <a class="small radius button" href="#">Upload Image</a><br>
-                                    <a class="small radius button" href="#">Choose existing</a>
-                                </div>
+                                <h5 class="subheader">For ex: Runu should be able to identify this image as owl, animal etc.</h5>
                             </div>
                             <div class="large-6 small-6 columns">
                                 <div ng-init="myVar = 'https://make.wordpress.org/core/files/2016/02/2A-3-1.jpg'">
                                     <img ng-src="{{myVar}}">
                                 </div>
                             </div>
+                            <hr>
                         </div>
                     </div>
+
                 </div>
-                <div class="large-4 columns hide-for-small">
-                    <h4>Get In Touch!</h4>
-                    <hr>
-                    <a href="#">
-                        <div class="panel radius callout" style="text-align: center">
-                            <strong>Upload Image</strong>
-                        </div></a> <a href="#">
-                        <div class="panel radius callout" style="text-align: center">
-                            <strong>Choose existing</strong>
-                        </div>
-                    </a>
-                </div>
+
             </div>
         </div>
     </div>

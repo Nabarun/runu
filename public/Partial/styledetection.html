@@ -9,7 +9,27 @@
 <div class="row">
     <div class="large-12 columns">
         <div class="row">
+            <div class="large-4 columns hide-for-small">
+                <h4>Upload an image</h4>
+                <hr>
+                <a href="#">
+                    <div class="panel radius callout" style="text-align: center">
+                        <div flow-init="{target: '/upload'}"
+                             flow-files-submitted="$flow.upload()"
+                             flow-file-success="fileSuccess($message)">
 
+                            <input type="file" flow-btn/>
+                            <span class="btn" flow-btn></span>
+
+                            <table>
+                                <tr ng-repeat="file in $flow.files">
+                                    <td><img flow-img="$flow.files[0]" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </a>
+            </div>
             <div class="large-8 columns">
                 <div class="panel radius">
                     <div class="row">
@@ -18,31 +38,21 @@
                             <hr>
                             <h5 class="subheader">This is a style detection feature which works on Google's machine learning AI. </h5>
                             <h5 class="subheader">It classifies a person attire into different classification</h5>
+                            <h5 class="subheader">For ex: Runu should not only detect the attach image but also the style of this image.</h5>
                             <div class="show-for-small" style="text-align: center">
                                 <a class="small radius button" href="#">Upload Image</a><br>
                                 <a class="small radius button" href="#">Choose existing</a>
                             </div>
                         </div>
                         <div class="large-6 small-6 columns">
-                            <div ng-init="myVar = 'https://make.wordpress.org/core/files/2016/02/2A-3-1.jpg'">
+                            <div ng-init="myVar = 'https://static-ssl.businessinsider.com/image/56fe9e18910584cc5e8ba10e-975-731/google-style-detection-hangover-girl.png'">
                                 <img ng-src="{{myVar}}">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="large-4 columns hide-for-small">
-                <h4>Get In Touch!</h4>
-                <hr>
-                <a href="#">
-                    <div class="panel radius callout" style="text-align: center">
-                        <strong>Upload Image</strong>
-                    </div></a> <a href="#">
-                <div class="panel radius callout" style="text-align: center">
-                    <strong>Choose existing</strong>
-                </div>
-            </a>
-            </div>
+
         </div>
     </div>
 </div>
