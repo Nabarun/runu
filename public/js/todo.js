@@ -28,10 +28,11 @@ runuApp.controller('StyleDetectionController', function($scope) {
 
 runuApp.controller('ImageDetectionController', function($scope, $http){
 
-    $scope.analyzePicture = function(){
-        $http.get("/detecttext")
+    $scope.analyzePicture = function(url){
+        $http.get('/getlabels?url=' + url)
             .then(function(response) {
-                $scope.textdetected = response.data;
+                console.log("Response my:"+ response);
+                $scope.message = response;
             });
     }
 

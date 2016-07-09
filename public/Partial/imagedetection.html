@@ -13,21 +13,34 @@
                     <hr>
                     <a href="#">
                         <div class="panel radius callout" style="text-align: center">
-                            <div flow-init="{target: '/upload'}"
-                                 flow-files-submitted="$flow.upload()"
-                                 flow-file-success='success($message)'>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label for="textEdit">Text:</label>
+                                        <input id="textEdit" type="text" ng-model="textValue" />
+                                        <button ng-click="analyzePicture(textValue)">Analyze</button>
+                                        {{response}}
+                                    </td>
+                                </tr>
 
-                                <input type="file" flow-btn ng-click="analyzePicture()"/>
-                                <span class="btn" flow-btn ></span>
+                            </table>
 
-                                <table>
-                                    <tr ng-repeat="file in $flow.files">
-                                        <td><img flow-img="$flow.files[0]" /></td>
-                                        <td>{{textdetected}}</td>
-                                    </tr>
 
-                                </table>
-                            </div>
+                            <!--<div flow-init="{target: '/upload'}"-->
+                                 <!--flow-files-submitted="$flow.upload()"-->
+                                 <!--flow-file-success='success($message)'>-->
+
+                                <!--<input type="file" flow-btn ng-click="analyzePicture()"/>-->
+                                <!--<span class="btn" flow-btn ></span>-->
+
+                                <!--<table>-->
+                                    <!--<tr ng-repeat="file in $flow.files">-->
+                                        <!--<td><img flow-img="$flow.files[0]" /></td>-->
+                                        <!--<td>{{textdetected}}</td>-->
+                                    <!--</tr>-->
+
+                                <!--</table>-->
+                            <!--</div>-->
                         </div>
                     </a>
                 </div>
