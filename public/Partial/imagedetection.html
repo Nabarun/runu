@@ -5,24 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-    <div class="row" ng-controller="ImageDetectionController">
+    <div class="row" ng-controller='ImageDetectionController'>
         <div class="large-12 columns">
             <div class="row">
                 <div class="large-4 columns hide-for-small">
                     <h4>Upload an image</h4>
                     <hr>
-                    <a href="#">
                         <div class="panel radius callout" style="text-align: center">
                             <table>
                                 <tr>
                                     <td>
-                                        <label for="textEdit">Text:</label>
-                                        <input id="textEdit" type="text" ng-model="textValue" />
-                                        <button ng-click="analyzePicture(textValue)">Analyze</button>
-                                        {{response}}
+                                        <label>Enter Image Url:
+                                            <input type="text" name="analyzelabel" ng-model="analyze.labelurl" required >
+                                            <button ng-click='analyzePicture(analyze.labelurl)'>Analyze</button>
+                                            
+                                        </label>
                                     </td>
                                 </tr>
-
                             </table>
 
 
@@ -42,7 +41,6 @@
                                 <!--</table>-->
                             <!--</div>-->
                         </div>
-                    </a>
                 </div>
                 <div class="large-8 columns">
                     <div class="panel radius">
@@ -68,5 +66,11 @@
             </div>
         </div>
     </div>
+    <form name="myForm" ng-controller="ExampleController">
+        <label>Single word:
+            <input type="text" name="input" ng-model="example.text"
+                   ng-pattern="example.word" required ng-trim="false">
+        </label>
+    </form>
 </body>
 </html>
