@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
 <body>
     <div class="row" ng-controller='ImageDetectionController'>
@@ -18,28 +19,11 @@
                                         <label>Enter Image Url:
                                             <input type="text" name="analyzelabel" ng-model="analyze.labelurl" required >
                                             <button ng-click='analyzePicture(analyze.labelurl)'>Analyze</button>
-                                            
+                                            <p ng-bind-html="analyzeResponse"></p>
                                         </label>
                                     </td>
                                 </tr>
                             </table>
-
-
-                            <!--<div flow-init="{target: '/upload'}"-->
-                                 <!--flow-files-submitted="$flow.upload()"-->
-                                 <!--flow-file-success='success($message)'>-->
-
-                                <!--<input type="file" flow-btn ng-click="analyzePicture()"/>-->
-                                <!--<span class="btn" flow-btn ></span>-->
-
-                                <!--<table>-->
-                                    <!--<tr ng-repeat="file in $flow.files">-->
-                                        <!--<td><img flow-img="$flow.files[0]" /></td>-->
-                                        <!--<td>{{textdetected}}</td>-->
-                                    <!--</tr>-->
-
-                                <!--</table>-->
-                            <!--</div>-->
                         </div>
                 </div>
                 <div class="large-8 columns">
@@ -48,9 +32,9 @@
                             <div class="large-6 small-6 columns">
                                 <h4>Detect Image</h4>
                                 <hr>
-                                <h5 class="subheader">On uploading an image Runu should able to identify the associated topics for that image. </h5>
-                                <h5 class="subheader">It classifies the image in 4 different categories: Adult, Medical, Spoof and Violence</h5>
-                                <h5 class="subheader">For ex: Runu should be able to identify this image as owl, animal etc.</h5>
+                                <h5 class="subheader"><p ng-bind-html="analyzeResponse">On uploading an image Runu should able to identify the associated topics for that image.</p>
+                                    <p>It classifies the image in 4 different categories: Adult, Medical, Spoof and Violence</p>
+                                    For ex: Runu should be able to identify this image as owl, animal etc.</h5>
                             </div>
                             <div class="large-6 small-6 columns">
                                 <div ng-init="myVar = 'https://make.wordpress.org/core/files/2016/02/2A-3-1.jpg'">
@@ -66,11 +50,5 @@
             </div>
         </div>
     </div>
-    <form name="myForm" ng-controller="ExampleController">
-        <label>Single word:
-            <input type="text" name="input" ng-model="example.text"
-                   ng-pattern="example.word" required ng-trim="false">
-        </label>
-    </form>
 </body>
 </html>

@@ -1,4 +1,4 @@
-var runuApp = angular.module('website',['flow']);
+var runuApp = angular.module('website',['ngSanitize']);
 
     runuApp.config(['$routeProvider', function($routeProvider){
         $routeProvider.
@@ -9,15 +9,6 @@ var runuApp = angular.module('website',['flow']);
             otherwise({redirectTo:'/imagedetection', template:'Partial/imagedetection.html'});
     }]);
 
-    runuApp.config(['flowFactoryProvider', function (flowFactoryProvider) {
-        flowFactoryProvider.defaults = {
-            target: 'upload.php',
-            permanentErrors: [404, 500, 501],
-            maxChunkRetries: 1,
-            chunkRetryInterval: 5000,
-            simultaneousUploads: 1
-        }
-    }]);
 
 runuApp.controller('StyleDetectionController', function($scope) {
     
@@ -27,12 +18,14 @@ runuApp.controller('StyleDetectionController', function($scope) {
 
 
 runuApp.controller('ImageDetectionController', function($scope, $http){
-
+    $scope.analyzeResponse = "Hi";
     $scope.analyzePicture = function(url){
         $http.get('/getlabels?url=' + url)
-            .then(function(response) {
+            .then(function successCallback(response) {
                 console.log("Response my:"+ response);
-                $scope.message = response;
+                $scope.analyzeResponse  = response;
+            }, function errorCallback(response) {
+                console.log("Exception Observed:"+ response);
             });
     }
 
