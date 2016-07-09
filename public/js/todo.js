@@ -18,12 +18,21 @@ runuApp.controller('StyleDetectionController', function($scope) {
 
 
 runuApp.controller('ImageDetectionController', function($scope, $http){
-    $scope.analyzeResponse = "Hi";
+
     $scope.analyzePicture = function(url){
         $http.get('/getlabels?url=' + url)
-            .then(function successCallback(response) {
-                console.log("Response my:"+ response);
-                $scope.analyzeResponse  = response;
+            .then(function successCallback(analysisResponse) {
+                console.log("Response my:"+ analysisResponse);
+                $("div.analysistitle").html(" <h4>This Image is having: </h4><hr>");
+
+                $( "div.analyzeText" ).html(function() {
+                    $scope.analysisResponse = analysisResponse.data;
+                });
+
+                $( "div.analyzeImage" ).html(function() {
+                    $scope.myVar = url;
+                });
+
             }, function errorCallback(response) {
                 console.log("Exception Observed:"+ response);
             });
@@ -32,7 +41,6 @@ runuApp.controller('ImageDetectionController', function($scope, $http){
 });
 
 runuApp.controller('FaceDetectionController', function($scope) {
-
     $scope.message = 'This is face detection';
 });
 

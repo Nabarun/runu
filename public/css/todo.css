@@ -2,3 +2,5 @@
     width: 100px;
     height: auto;
 }
+
+.shadow {box-shadow: 0 10px 6px -6px #000000;}
