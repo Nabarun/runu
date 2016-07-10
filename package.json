@@ -24,6 +24,7 @@
     "foobar": "^1.1.0",
     "foundation-sites": "^6.2.3",
     "gcloud": "^0.36.0",
+    "grpc": "^0.15.0",
     "grunt-cli": "^1.2.0",
     "heroku": "^0.2.0",
     "http": "0.0.0",
