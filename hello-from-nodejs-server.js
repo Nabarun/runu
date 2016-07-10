@@ -53,6 +53,7 @@ http.createServer(function handler(req, res) {
             getLandmarkFromImage(queryData.query['url'], res);
 
         }
+
     }
 
 }).listen(process.env.PORT || 5000);
@@ -159,6 +160,28 @@ function getLandmarkFromImage(url, res){
 
     // Read the topics from an image.
     vision.detectLandmarks(url, function (err, text) {
+        var json = JSON.stringify(text);
+        console.log(json);
+        res.writeHead(200, {'Content-Type': 'text/plain'});
+        res.end(json);
+    });
+}
+
+
+/*
+ Get the Property from the image
+ */
+function getPropertiesFromImage(url, res){
+    console.log(url);
+
+    var gcloud = require('gcloud');
+    var vision = gcloud.vision({
+        projectId: 'visionapisfdc',
+        keyFilename: 'keyfile.json'
+    });
+
+    // Read the topics from an image.
+    vision.detectProperties(url, function (err, text) {
         var json = JSON.stringify(text);
         console.log(json);
         res.writeHead(200, {'Content-Type': 'text/plain'});

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <link href="../css/todo.css" rel="stylesheet" />
 </head>
 <body>
     <div class="row" ng-controller='ImageDetectionController'>
@@ -13,21 +13,15 @@
                     <h4>Upload an image</h4>
                     <hr>
                         <div class="panel radius callout" style="text-align: center">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <label>Enter Image Url:
-                                            <input type="text" name="analyzelabel" ng-model="analyze.labelurl" required >
-                                            <button ng-click='analyzePicture(analyze.labelurl)'>Analyze</button>
-                                            <p ng-bind-html="myText"></p>
-                                        </label>
-                                    </td>
-                                </tr>
-                            </table>
+                            <label>Enter Image Url:
+                                <input type="text" name="analyzelabel" ng-model="analyze.labelurl" required >
+                                <button ng-click='analyzePicture(analyze.labelurl)'>Analyze</button>
+                                <p ng-bind-html="myText"></p>
+                            </label>
                         </div>
                 </div>
                 <div class="large-8 columns">
-                    <div class="panel radius">
+                    <div class="panel radius" ng-style="{'background-image': 'url(http://hdwallnpics.com/wp-content/gallery/white-background-wallpaper/White-Background-Wallpaper.jpg)'}">
                         <div class="row">
 
                             <div class="large-6 small-6 columns analyzeText">
@@ -38,7 +32,7 @@
                                     <h5 class="subheader"><p>On uploading an image Runu should able to identify the associated topics for that image.</p></h5>
                                     <h5 class="subheader"><p>For ex: An owl's image should identify the picture as owl</p></h5>
                                 </div>
-                                <div ng-repeat="x in analysisResponse" class="shadow">{{x}}</div>
+                                <div ng-repeat="x in analysisResponse">{{x}}</div>
 
                             </div>
                             <div class="large-6 small-6 columns analyzeImage">
