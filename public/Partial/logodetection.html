@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Logo Detection</title>
     <link href="../css/todo.css" rel="stylesheet" />
 </head>
 <body>
@@ -30,13 +30,13 @@
                                 <h4>Detect Image</h4>
                                 <hr>
                                 <h5 class="subheader"><p>On uploading an image Runu should able to identify the associated logo in that image.</p></h5>
-                                <h5 class="subheader"><p>For ex: A facebook logo should be identified by Runu as a Facebook one.</p></h5>
+                                <h5 class="subheader"><p>For ex: The attached logo should be identified by Runu as a Coca-Cola logo.</p></h5>
                             </div>
                             <div ng-repeat="x in analysisResponse">{{x}}</div>
 
                         </div>
                         <div class="large-6 small-6 columns analyzeImage">
-                            <div ng-init="myVar = 'https://www.facebook.com/images/fb_icon_325x325.png'">
+                            <div ng-init="myVar = 'http://franverona.com/loadgo/logos/cocacola.png'">
                                 <img ng-src="{{myVar}}">
                             </div>
                         </div>

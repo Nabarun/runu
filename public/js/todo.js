@@ -5,6 +5,7 @@ var runuApp = angular.module('website',[]);
             when('/imagedetection', {templateUrl:'Partial/imagedetection.html', controller: 'ImageDetectionController'}).
             when('/facedetection', {templateUrl:'Partial/facedetection.html', controller: 'FaceDetectionController'}).
             when('/locationdetection', {templateUrl:'Partial/locationdetection.html', controller: 'LocationDetectionController'}).
+            when('/logodetection', {templateUrl:'Partial/logodetection.html', controller: 'LogoDetectionController'}).
             otherwise({redirectTo:'/imagedetection', template:'Partial/imagedetection.html'});
     }]);
 
@@ -54,8 +55,26 @@ runuApp.controller('LogoDetectionController', function($scope, $http){
     }
 });
 
-runuApp.controller('FaceDetectionController', function($scope) {
-    $scope.message = 'This is face detection';
+runuApp.controller('FaceDetectionController', function($scope, $http) {
+    $scope.analyzePicture = function(url){
+        $http.get('/getface?url=' + url)
+            .then(function successCallback(analysisResponse) {
+                console.log("Response my:"+ analysisResponse);
+
+                $("div.analysistitle").html(" <h4>This Image is having: </h4><hr>");
+
+                $( "div.analyzeText" ).html(function() {
+                    $scope.analysisResponse = analysisResponse.data;
+                });
+
+                $( "div.analyzeImage" ).html(function() {
+                    $scope.myVar = url;
+                });
+
+            }, function errorCallback(response) {
+                console.log("Exception Observed:"+ response);
+            });
+    }
 });
 
 runuApp.controller('LocationDetectionController', function($scope, $http) {

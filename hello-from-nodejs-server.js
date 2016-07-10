@@ -116,16 +116,18 @@ function getFaceFromImage(url, res){
     });
 
     // Read the topics from an image.
-    vision.detectFaces(url, function (err, text) {
-        var json = JSON.stringify(text);
-        console.log(json);
+    vision.detectFaces(url, function (err, faces) {
+        var numFaces = faces.length;
+        var faceMsg = 'Found ' + numFaces + (numFaces === 1 ? ' face' : ' faces');
+
+        var json = JSON.stringify(faceMsg);
         res.writeHead(200, {'Content-Type': 'text/plain'});
         res.end(json);
     });
 }
 
 /*
- Get the face from the image
+ Get the logos from the image
  */
 function getLogoFromImage(url, res){
     console.log(url);
@@ -147,7 +149,7 @@ function getLogoFromImage(url, res){
 
 
 /*
- Get the face from the image
+ Get the Landmark from the image
  */
 function getLandmarkFromImage(url, res){
     console.log(url);
@@ -160,28 +162,6 @@ function getLandmarkFromImage(url, res){
 
     // Read the topics from an image.
     vision.detectLandmarks(url, function (err, text) {
-        var json = JSON.stringify(text);
-        console.log(json);
-        res.writeHead(200, {'Content-Type': 'text/plain'});
-        res.end(json);
-    });
-}
-
-
-/*
- Get the Property from the image
- */
-function getPropertiesFromImage(url, res){
-    console.log(url);
-
-    var gcloud = require('gcloud');
-    var vision = gcloud.vision({
-        projectId: 'visionapisfdc',
-        keyFilename: 'keyfile.json'
-    });
-
-    // Read the topics from an image.
-    vision.detectProperties(url, function (err, text) {
         var json = JSON.stringify(text);
         console.log(json);
         res.writeHead(200, {'Content-Type': 'text/plain'});
