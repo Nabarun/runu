@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3c936f0e-7eff-47f7-b36f-f5e697ce18cc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hello-from-nodejs-server.js" afterPath="$PROJECT_DIR$/hello-from-nodejs-server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Partial/facedetection.html" afterPath="$PROJECT_DIR$/public/Partial/facedetection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Partial/imagedetection.html" afterPath="$PROJECT_DIR$/public/Partial/imagedetection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Partial/locationdetection.html" afterPath="$PROJECT_DIR$/public/Partial/locationdetection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Partial/logodetection.html" afterPath="$PROJECT_DIR$/public/Partial/logodetection.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/todo.js" afterPath="$PROJECT_DIR$/public/js/todo.js" />
     </list>
     <ignored path="com.runu.node-angular.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +47,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            <state relative-caret-position="660">
+              <caret line="62" column="78" selection-start-line="62" selection-start-column="78" selection-end-line="62" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -483,7 +477,7 @@
       <workItem from="1467692614705" duration="6341000" />
       <workItem from="1467781865731" duration="1565000" />
       <workItem from="1467865026924" duration="18601000" />
-      <workItem from="1468134543024" duration="2082000" />
+      <workItem from="1468134543024" duration="2530000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing issues">
       <created>1467692675413</created>
@@ -496,7 +490,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73046000" />
+    <option name="totallyTimeSpent" value="73494000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2048" height="1049" extended-state="6" />
@@ -866,8 +860,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        <state relative-caret-position="660">
+          <caret line="62" column="78" selection-start-line="62" selection-start-column="78" selection-end-line="62" selection-end-column="78" />
           <folding />
         </state>
       </provider>
