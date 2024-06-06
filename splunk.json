@@ -1,0 +1,235 @@
+[
+  {
+    "preview": false,
+    "result": {
+      "day": "01",
+      "exception_type": "ResourceApiException",
+      "count": "182"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "02",
+      "exception_type": "DirectSoapException",
+      "count": "1"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "02",
+      "exception_type": "InvalidParameterValueException",
+      "count": "1"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "02",
+      "exception_type": "ResourceApiException",
+      "count": "177"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "03",
+      "exception_type": "ResourceApiException",
+      "count": "1096"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "04",
+      "exception_type": "DirectSoapException",
+      "count": "3"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "04",
+      "exception_type": "InvalidParameterValueException",
+      "count": "28"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "04",
+      "exception_type": "ResourceApiException",
+      "count": "2502"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "05",
+      "exception_type": "DirectSoapException",
+      "count": "29"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "05",
+      "exception_type": "InvalidParameterValueException",
+      "count": "34"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "05",
+      "exception_type": "ManagedContentServicesGenericException",
+      "count": "12"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "05",
+      "exception_type": "NoAccessException",
+      "count": "5"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "05",
+      "exception_type": "ResourceApiException",
+      "count": "7286"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "05",
+      "exception_type": "SalesforceGenericException",
+      "count": "2"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "06",
+      "exception_type": "InvalidParameterValueException",
+      "count": "35"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "06",
+      "exception_type": "ManagedContentServicesGenericException",
+      "count": "12"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "06",
+      "exception_type": "ResourceApiException",
+      "count": "4326"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "07",
+      "exception_type": "ResourceApiException",
+      "count": "1"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "21",
+      "exception_type": "DirectSoapException",
+      "count": "4"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "21",
+      "exception_type": "ManagedContentServicesGenericException",
+      "count": "11"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "21",
+      "exception_type": "ResourceApiException",
+      "count": "5213"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "21",
+      "exception_type": "RunningForTooLongException",
+      "count": "4"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "22",
+      "exception_type": "DirectSoapException",
+      "count": "2"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "22",
+      "exception_type": "ResourceApiException",
+      "count": "1014"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "24",
+      "exception_type": "ResourceApiException",
+      "count": "1"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "28",
+      "exception_type": "ResourceApiException",
+      "count": "3"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "29",
+      "exception_type": "ResourceApiException",
+      "count": "7"
+    }
+  },
+  {
+    "preview": false,
+    "result": {
+      "day": "30",
+      "exception_type": "ResourceApiException",
+      "count": "14"
+    }
+  },
+  {
+    "preview": false,
+    "lastrow": true,
+    "result": {
+      "day": "31",
+      "exception_type": "ResourceApiException",
+      "count": "73"
+    }
+  }
+]
